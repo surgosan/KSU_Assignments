@@ -6,7 +6,7 @@ import java.util.Scanner;
 //c) Use the Modulo Operator to find how many hours, minutes, and seconds that
 //represents
 //d) Display the results in hours, minutes, and seconds
-public class Seconds_To_Time {
+public class Assignment_2B_Seconds_To_Time {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter an amount of seconds less than 10k. No Decimals");
