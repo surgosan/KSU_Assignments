@@ -1,3 +1,4 @@
+package Class_1321L;
 import java.util.Scanner;
 
 public class Assignment_3A_Sickness_Diagnoser {
