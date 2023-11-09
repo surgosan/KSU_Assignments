@@ -1,3 +1,5 @@
+package Assignment_Two;
+//Scanner inputs assume you entered the correct value
 import java.util.Scanner;
 
 public class Driver {
@@ -10,15 +12,15 @@ public class Driver {
             System.out.println("""
                     Menu:
                       Enter the number of the option you want.\s
-                    1) Add Bus\s
-                    2) Add Person to Bus\s
-                    3) Remove Bus\s
-                    4) Remove Person\s
+                    1) Add Assignment_Two.Bus\s
+                    2) Add Assignment_Two.Person to Assignment_Two.Bus\s
+                    3) Remove Assignment_Two.Bus\s
+                    4) Remove Assignment_Two.Person\s
                     5) List Passengers\s
                     6) List Buses\s
-                    7) Requeue Bus\s
-                    8) Transfer Person\s
-                    9) Dispatch Next Bus\s
+                    7) Requeue Assignment_Two.Bus\s
+                    8) Transfer Assignment_Two.Person\s
+                    9) Dispatch Next Assignment_Two.Bus\s
                     10) Quit""");
             int menuOption = in.nextInt();
             in.nextLine();
@@ -30,7 +32,7 @@ public class Driver {
                     System.out.printf("%d added to position %d.%n", bus.getBusID(), dispatch.getSize());
                     break;
                 case 2:
-                    System.out.println("Provide Bus ID");
+                    System.out.println("Provide Assignment_Two.Bus ID");
                     int busID = in.nextInt();
                     in.nextLine();
 
@@ -51,19 +53,19 @@ public class Driver {
                     }
                     break;
                 case 3:
-                    System.out.println("Provide Bus ID");
+                    System.out.println("Provide Assignment_Two.Bus ID");
                     int caseThreeBusID = in.nextInt();
                     in.nextLine();
 
                     if(dispatch.findBus(caseThreeBusID) != null) {
                         dispatch.removeBus(caseThreeBusID);
-                        System.out.printf("Bus %d removed.%n", caseThreeBusID);
+                        System.out.printf("Assignment_Two.Bus %d removed.%n", caseThreeBusID);
                     } else {
                         System.out.println("No bus with id " + caseThreeBusID);
                     }
                     break;
                 case 4:
-                    System.out.println("Provide Bus ID");
+                    System.out.println("Provide Assignment_Two.Bus ID");
                     int caseFourBusID = in.nextInt();
                     in.nextLine();
 
@@ -88,16 +90,16 @@ public class Driver {
                     in.nextLine();
 
                     if(dispatch.findBus(caseFiveBusID) != null) {
-                        System.out.printf("Bus %d%n%s%n", caseFiveBusID, dispatch.findBus(caseFiveBusID).getPassengers());
+                        System.out.printf("Assignment_Two.Bus %d%n%s%n", caseFiveBusID, dispatch.findBus(caseFiveBusID).getPassengers());
                     } else {
                         System.out.printf("No buses with id %d.%n", caseFiveBusID);
                     }
                     break;
                 case 6:
-                    System.out.printf("Bus Queue%n%s%n", dispatch);
+                    System.out.printf("Assignment_Two.Bus Queue%n%s%n", dispatch);
                     break;
                 case 7:
-                    System.out.println("Provide Bus ID.");
+                    System.out.println("Provide Assignment_Two.Bus ID.");
                     int caseSevenBusID = in.nextInt();
                     in.nextLine();
 
@@ -107,7 +109,7 @@ public class Driver {
                         in.nextLine();
 
                         dispatch.addBus(dispatch.removeBus(caseSevenBusID), caseSevenBusPosition);
-                        System.out.printf("Bus %d added to position %d.%n", caseSevenBusID, caseSevenBusPosition);
+                        System.out.printf("Assignment_Two.Bus %d added to position %d.%n", caseSevenBusID, caseSevenBusPosition);
                     } else {
                         System.out.println("No such bus found.");
                     }
@@ -128,7 +130,7 @@ public class Driver {
                     } else if(dispatch.findBus(caseEightBusTwo) == null) {
                         System.out.println("Destination bus not found.");
                     } else if(dispatch.findBus(caseEightBusOne).findPerson(caseEightPerson) == null) {
-                        System.out.println("Person was not found withing current bus.");
+                        System.out.println("Assignment_Two.Person was not found withing current bus.");
                     } else {
                         try {
                             dispatch.findBus(caseEightBusOne).transferPerson(dispatch.findBus(caseEightBusOne), dispatch.findBus(caseEightBusTwo), caseEightPerson);
@@ -140,9 +142,9 @@ public class Driver {
                     break;
                 case 9:
                     if(dispatch.dispatchBus() == null) {
-                        System.out.println("Bus queue is empty.");
+                        System.out.println("Assignment_Two.Bus queue is empty.");
                     } else {
-                        System.out.printf("Bus %d has been dispatched.%n", dispatch.dispatchBus().getBusID());
+                        System.out.printf("Assignment_Two.Bus %d has been dispatched.%n", dispatch.dispatchBus().getBusID());
                     }
                     break;
                 case 10:
