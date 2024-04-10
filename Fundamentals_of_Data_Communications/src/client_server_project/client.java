@@ -4,8 +4,8 @@ import java.net.*;
 
 public class client {
     public static void main(String[] args) {
-        final String serverAddress = "192.168.1.16"; // Replace this with the server machine's IP address
-        final int port = 8080;
+        final String serverAddress = "192.168.1.20"; // Command Prompt > ipconfig to get IPv4
+        final int port = 8081;
 
         try(Socket socket = new Socket(serverAddress, port);
             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);

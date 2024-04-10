@@ -21,7 +21,7 @@ public class server {
                 while ((inLine = in.readLine()) != null) {
                     if(inLine.equals("end")) {
                         out.println("dne");
-                        break;
+                        return;
                     }
                     out.println(new StringBuilder(inLine).reverse().toString());
                 }
